@@ -1,0 +1,17 @@
+body{font-family:Arial, Helvetica, sans-serif;background:#f5f7fb;margin:0;padding:16px}
+  .container{max-width:720px;margin:0 auto}
+  .card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(2,6,23,0.06);margin-bottom:16px}
+  h2{margin:0 0 8px 0}
+  .topup-buttons{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  .topup-buttons button{padding:10px 14px;border-radius:10px;border:0;background:#ffb703;color:#021024;font-weight:700;cursor:pointer}
+  .saldo{font-size:20px;font-weight:700;margin:10px 0;text-align:center}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+  .box{background:#0ea5e9;color:#fff;border-radius:10px;height:96px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;cursor:pointer;user-select:none}
+  .box.open{background:#94a3b8;cursor:default}
+  .box.bomb{background:#ef4444}
+  .actions{display:flex;gap:8px;justify-content:center;margin-top:12px}
+  .btn{padding:10px 16px;border-radius:10px;border:0;background:#06b6d4;color:#022;cursor:pointer;font-weight:700}
+  .btn.wd{background:#16a34a;color:#fff}
+  .muted{color:#6b7280;font-size:13px;text-align:center;margin-top:8px}
+  pre{white-space:pre-wrap;word-break:break-word;background:#f1f5f9;padding:8px;border-radius:8px}
+  @media (max-width:480px){ .box{height:80px;font-size:18px} }
