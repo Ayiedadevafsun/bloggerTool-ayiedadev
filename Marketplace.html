@@ -1,167 +1,93 @@
-<style>
-.output-box {
-    width: 100%;
-    background: #f5f5f5;
-    border: 1px solid #ccc;
-    padding: 12px;
-    margin-top: 25px;
-    border-radius: 6px;
-    white-space: pre-wrap;
-    cursor: pointer;
-}
-.output-box:hover { background: #e8e8e8; }
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Auto Generator</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+      max-width: 400px;
+      margin: 10px auto;
+      display: block;
+    }
+    #qrcode {
+      margin-top: 20px;
+    }
+    #downloadBtn {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 16px;
+      background: #28a745;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
 
-.toast {
-    position: fixed;
-    bottom:20px;
-    left:50%;
-    transform:translateX(-50%);
-    background:#00c853;
-    color:#fff;
-    padding:10px 20px;
-    border-radius:8px;
-    display:none;
-}
+  <h2>🧠 QR Code Generator Otomatis</h2>
+  <input type="text" id="qrtext" placeholder="Ketik teks/link apa saja...">
+  <button id="downloadBtn" onclick="downloadQR()">⬇️ Download PNG</button>
 
-.form-box input, .form-box select {
-    width:100%;
-    padding:8px;
-    margin-bottom:10px;
-    border-radius:6px;
-    border:1px solid #ccc;
-}
-button {
-    padding:10px;
-    border:none;
-    border-radius:6px;
-    background:#00b0ff;
-    color:white;
-    width:100%;
-}
-</style>
+  <div id="qrcode"></div>
 
-<h3>Tambah Produk</h3>
-<form id="addProductForm" class="form-box">
-
-    Nama Produk:<br>
-    <input type="text" id="name" required>
-
-    Toko:<br>
-    <input type="text" id="shop" required>
-
-    Kategori:<br>
-    <select id="category" required>
-        <option value="Elektronik">Elektronik</option>
-        <option value="Fashion">Fashion</option>
-        <option value="Makanan">Makanan</option>
-    </select>
-
-    Harga Asli:<br>
-    <input type="number" id="originalPrice" required>
-
-    Harga Diskon:<br>
-    <input type="number" id="discountPrice" required>
-
-    Stok Barang (contoh: 1/2/habis):<br>
-    <input type="text" id="stock" required>
-
-    Rating (1–5):<br>
-    <input type="number" id="rating" min="1" max="5" required>
-
-    URL Gambar:<br>
-    <input type="text" id="imgURL" required>
-
-    URL Pembelian:<br>
-    <input type="text" id="buyURL" required>
-
-    <button type="submit">Tambah Produk</button>
-</form>
-
-<h3>Beranda Produk</h3>
-<div id="productContainer"></div>
-
-<h3>Output HTML Semua Produk (Klik untuk Copy)</h3>
-<div id="outputBox" class="output-box">Belum ada output...</div>
-
-<div id="toast" class="toast">✔ Disalin!</div>
-
-<script>
-
-// ARRAY UNTUK MENYIMPAN SEMUA PRODUK
-let allProductsHTML = [];
-
-document.getElementById("addProductForm").addEventListener("submit", function(e){
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const shop = document.getElementById("shop").value;
-    const category = document.getElementById("category").value;
-    const originalPrice = document.getElementById("originalPrice").value;
-    const discountPrice = document.getElementById("discountPrice").value;
-    const imgURL = document.getElementById("imgURL").value;
-    const buyURL = document.getElementById("buyURL").value;
-    const stock = document.getElementById("stock").value;
-    const rating = document.getElementById("rating").value;
-    const date = new Date().toLocaleDateString("id-ID");
-
-    let stars = "";
-    for(let i=0; i<rating; i++) stars += "⭐";
-
-    // CARD HTML
-    const cardHTML = `
-<div class="card" style="border-radius: 8px; border: 1px solid rgb(221,221,221); box-sizing: border-box; display: inline-block; margin: 15px; padding: 5px; vertical-align: top; width: 150px; position:relative;">
-
-    <div style='position:absolute; top:5px; left:5px; background:#ff0000; color:white; padding:2px 5px; font-size:11px; border-radius:4px;'>Stock: ${stock}</div>
-
-    <div onclick="alert('${name}: Ditambahkan ke troli')" 
-         style="position:absolute; top:5px; right:5px; background:white; border-radius:50%; padding:5px; box-shadow:0 0 4px rgba(0,0,0,0.3); cursor:pointer;">
-         🛒
-    </div>
-
-    <img alt="${name}" src="${imgURL}" style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; border-radius: 5px; border: 1px solid rgb(238,238,238); box-shadow: rgba(0,0,0,0.1) 1px 1px 5px; box-sizing: border-box; display: block; height: auto; max-width: 100%; padding: 5px; width: 158px;" />
-
-    <div class="title" style="box-sizing: border-box; font-weight: bold; margin-top: 5px;">${name}</div>
-    <div class="shop" style="box-sizing: border-box; color: #555; font-size: 12px;">${shop}</div>
-    <div class="category" style="box-sizing: border-box; color: #555; font-size: 12px;">🔖${category}</div>
-
-    <div class="price" style="box-sizing: border-box; font-weight: bold; margin-top: 5px;">
-        Rp ${discountPrice}
-        <span class="old-price" style="box-sizing: border-box; color: #999; font-size: 12px; margin-left: 5px; text-decoration-line: line-through;">Rp ${originalPrice}</span>
-    </div>
-
-    <div class="date" style="box-sizing: border-box; margin-top:4px; font-size: 8px;">
-        ${stars} &nbsp; | &nbsp; ${date}
-    </div>
-
-    <a class="button" href="${buyURL}" style="background: rgb(0,191,255); border-radius: 5px; box-sizing: border-box; color: white; display: block; margin-top: 8px; padding: 5px; text-decoration-line: none;">Beli Sekarang</a>
-</div>`.trim();
-
-    // TAMBAHKAN KE HALAMAN PREVIEW
-    const temp = document.createElement("div");
-    temp.innerHTML = cardHTML;
-    document.getElementById("productContainer").appendChild(temp.firstElementChild);
-
-    // SIMPAN KE ARRAY
-    allProductsHTML.push(cardHTML);
-
-    // OUTPUT HTML TERKUMPUL
-    const finalHTML = `
-<div class="katalog-grid" style="display:flex; flex-wrap:wrap; justify-content:center;">
-${allProductsHTML.join("\n")}
-</div>`;
-
-    document.getElementById("outputBox").textContent = finalHTML;
-
-    // RESET FORM
-    this.reset();
-});
-
-// COPY OUTPUT
-document.getElementById("outputBox").addEventListener("click", function(){
-    navigator.clipboard.writeText(this.textContent).then(() => {
-        const t = document.getElementById("toast");
-        t.style.display = "block";
-        setTimeout(()=> t.style.display="none", 1200);
+  <script>
+    let qrcode = new QRCode("qrcode", {
+      text: "",
+      width: 200,
+      height: 200,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
     });
-});
-</script>
+
+    const input = document.getElementById("qrtext");
+    const qrcodeContainer = document.getElementById("qrcode");
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    input.addEventListener("input", () => {
+      const value = input.value.trim();
+      qrcodeContainer.innerHTML = "";
+
+      if (value !== "") {
+        new QRCode(qrcodeContainer, {
+          text: value,
+          width: 200,
+          height: 200,
+          colorDark: "#000000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.H
+        });
+        downloadBtn.style.display = "inline-block";
+      } else {
+        downloadBtn.style.display = "none";
+      }
+    });
+
+    function downloadQR() {
+      const qrCanvas = document.querySelector("#qrcode canvas");
+      if (!qrCanvas) {
+        alert("QR belum dibuat, Pak.");
+        return;
+      }
+      const link = document.createElement("a");
+      link.href = qrCanvas.toDataURL("image/png");
+      link.download = "qr-code.png";
+      link.click();
+    }
+  </script>
+
+</body>
+</html>
