@@ -3,22 +3,6 @@ body{
   font-family: Arial, sans-serif;
   background:#f4f6f8;
 }
-
-/* AREA KONTEN */
-.tool-container{
-  max-width:700px;
-  margin:40px auto 100px;
-  background:#fff;
-  padding:20px;
-  border-radius:14px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-/* SEMUA PAGE */
-.tool-page{
-  display:none;
-}
-
 /* popular */
 .popular-box{
   margin:20px 10px;
