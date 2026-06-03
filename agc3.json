@@ -6,8 +6,8 @@
     "rating": 8.6,
     "genre": ["Action", "Sci-Fi"],
     "type": "movie",
-    "link": "https://www.themoviedb.org/movie/693134",
-    "poster": "https://media.themoviedb.org/t/p/w220_and_h330_face/uOYAbN3F5n3ne8TzWjzVEvQ7XGX.jpg",
+    "link": "/p/movie.html?id=693134",
+    "poster": "https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH9Ai4N0s4p.jpg",
     "trailer": "https://www.youtube.com/embed/Way9Dexny3w"
   },
   {
@@ -17,7 +17,7 @@
     "rating": 8.5,
     "genre": ["Drama", "History"],
     "type": "movie",
-    "link": "https://www.themoviedb.org/movie/872585",
+    "link": "/p/movie.html?id=872585",
     "poster": "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
     "trailer": "https://www.youtube.com/embed/uYPbbksJxIg"
   },
@@ -28,7 +28,7 @@
     "rating": 7.8,
     "genre": ["Action", "Thriller"],
     "type": "movie",
-    "link": "https://www.themoviedb.org/movie/603692",
+    "link": "/p/movie.html?id=603692",
     "poster": "https://image.tmdb.org/t/p/w500/gh2bmprLtUQ8oXCSluzfqaicyrm.jpg",
     "trailer": "https://www.youtube.com/embed/qEVUtrk8_B4"
   },
@@ -39,7 +39,7 @@
     "rating": 8.0,
     "genre": ["Action", "Adventure"],
     "type": "movie",
-    "link": "https://www.themoviedb.org/movie/634649",
+    "link": "/p/movie.html?id=634649",
     "poster": "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
     "trailer": "https://www.youtube.com/embed/JfVOs4VSpmA"
   },
@@ -50,7 +50,7 @@
     "rating": 7.8,
     "genre": ["Crime", "Drama"],
     "type": "movie",
-    "link": "https://www.themoviedb.org/movie/414906",
+    "link": "/p/movie.html?id=414906",
     "poster": "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg",
     "trailer": "https://www.youtube.com/embed/mqqft2x_Aa4"
   },
@@ -62,7 +62,7 @@
     "rating": 7.6,
     "genre": ["Sci-Fi", "Adventure"],
     "type": "movie",
-    "link": "https://www.themoviedb.org/movie/76600",
+    "link": "/p/movie.html?id=76600",
     "poster": "https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
     "trailer": "https://www.youtube.com/embed/d9MyW72ELq0"
   },
@@ -74,8 +74,8 @@
     "rating": 8.7,
     "genre": ["Sci-Fi", "Drama"],
     "type": "movie",
-    "link": "https://www.themoviedb.org/movie/157336",
-    "poster": "https://media.themoviedb.org/t/p/w188_and_h282_face/mS4EvhsrT0SQZOlWrQEzWI5KiUa.jpg",
+    "link": "/p/movie.html?id=157336",
+    "poster": "https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqoNMq5k8g4q1Q.jpg",
     "trailer": "https://www.youtube.com/embed/zSWdZVtXT7E"
   },
 
@@ -86,7 +86,7 @@
     "rating": 9.0,
     "genre": ["Action", "Crime"],
     "type": "movie",
-    "link": "https://www.themoviedb.org/movie/155",
+    "link": "/p/movie.html?id=155",
     "poster": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
     "trailer": "https://www.youtube.com/embed/EXeTwQWrcwY"
   },
@@ -98,7 +98,7 @@
     "rating": 8.8,
     "genre": ["Sci-Fi", "Action"],
     "type": "movie",
-    "link": "https://www.themoviedb.org/movie/27205",
+    "link": "/p/movie.html?id=27205",
     "poster": "https://image.tmdb.org/t/p/w500/8IB2e4r4oVhHnANbnm7O3Tj6tF8.jpg",
     "trailer": "https://www.youtube.com/embed/YoHD9XEInc0"
   },
@@ -110,7 +110,7 @@
     "rating": 8.4,
     "genre": ["Action", "Adventure"],
     "type": "movie",
-    "link": "https://www.themoviedb.org/movie/299534",
+    "link": "/p/movie.html?id=299534",
     "poster": "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
     "trailer": "https://www.youtube.com/embed/TcMBFSGVi1c"
   },
@@ -122,7 +122,7 @@
     "rating": 9.5,
     "genre": ["Crime", "Drama"],
     "type": "series",
-    "link": "https://www.themoviedb.org/tv/1396",
+    "link": "/p/tv.html?id=1396",
     "poster": "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
     "trailer": "https://www.youtube.com/embed/HhesaQXLuRY"
   },
@@ -134,7 +134,7 @@
     "rating": 9.2,
     "genre": ["Fantasy", "Drama"],
     "type": "series",
-    "link": "https://www.themoviedb.org/tv/1399",
+    "link": "/p/tv.html?id=1399",
     "poster": "https://image.tmdb.org/t/p/w500/7WUHnWGx5OO145IRxPDUkQSh4C7.jpg",
     "trailer": "https://www.youtube.com/embed/KPLWWIOCOOQ"
   },
@@ -146,7 +146,7 @@
     "rating": 8.7,
     "genre": ["Sci-Fi", "Horror"],
     "type": "series",
-    "link": "https://www.themoviedb.org/tv/66732",
+    "link": "/p/tv.html?id=66732",
     "poster": "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
     "trailer": "https://www.youtube.com/embed/b9EkMc79ZSU"
   },
@@ -158,7 +158,7 @@
     "rating": 8.1,
     "genre": ["Fantasy", "Action"],
     "type": "series",
-    "link": "https://www.themoviedb.org/tv/71912",
+    "link": "/p/tv.html?id=71912",
     "poster": "https://image.tmdb.org/t/p/w500/7vjaCdMw15FEbXyLQTVa04URsPm.jpg",
     "trailer": "https://www.youtube.com/embed/ndl1W4ltcmg"
   },
@@ -170,8 +170,8 @@
     "rating": 8.2,
     "genre": ["Crime", "Drama"],
     "type": "series",
-    "link": "https://www.themoviedb.org/tv/71446",
-    "poster": "https://media.themoviedb.org/t/p/w188_and_h282_face/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
+    "link": "/p/tv.html?id=71446",
+    "poster": "https://image.tmdb.org/t/p/w500/reemIdmO4kfEFJ4f4hW3O7t8b5b.jpg",
     "trailer": "https://www.youtube.com/embed/_InqQJRqGW4"
   },
 
@@ -182,7 +182,7 @@
     "rating": 8.0,
     "genre": ["Mystery", "Comedy"],
     "type": "series",
-    "link": "https://www.themoviedb.org/tv/119051",
+    "link": "/p/tv.html?id=119051",
     "poster": "https://image.tmdb.org/t/p/w500/9PFonBhy4cQy7Jz20NpMygczOkv.jpg",
     "trailer": "https://www.youtube.com/embed/Q73UhUTs6y0"
   },
@@ -194,7 +194,7 @@
     "rating": 8.7,
     "genre": ["Action", "Comedy"],
     "type": "series",
-    "link": "https://www.themoviedb.org/tv/76479",
+    "link": "/p/tv.html?id=76479",
     "poster": "https://image.tmdb.org/t/p/w500/stTEycfG9928HYGEISBFaG1ngjM.jpg",
     "trailer": "https://www.youtube.com/embed/5SKP1_F7ReE"
   },
@@ -206,7 +206,7 @@
     "rating": 8.2,
     "genre": ["Sci-Fi", "Adventure"],
     "type": "series",
-    "link": "https://www.themoviedb.org/tv/84958",
+    "link": "/p/tv.html?id=84958",
     "poster": "https://image.tmdb.org/t/p/w500/voHUmluYmKyleFkTu3lOXQG702u.jpg",
     "trailer": "https://www.youtube.com/embed/nW948Va-l10"
   },
@@ -218,7 +218,7 @@
     "rating": 8.0,
     "genre": ["Drama", "Thriller"],
     "type": "series",
-    "link": "https://www.themoviedb.org/tv/93405",
+    "link": "/p/tv.html?id=93405",
     "poster": "https://image.tmdb.org/t/p/w500/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg",
     "trailer": "https://www.youtube.com/embed/oqxAJKy0ii4"
   },
@@ -230,7 +230,7 @@
     "rating": 8.8,
     "genre": ["Sci-Fi", "Mystery"],
     "type": "series",
-    "link": "https://www.themoviedb.org/tv/70523",
+    "link": "/p/tv.html?id=70523",
     "poster": "https://image.tmdb.org/t/p/w500/apbrbWs8M9lyOpJYU5WXrpFbk1Z.jpg",
     "trailer": "https://www.youtube.com/embed/rrwycJ08PSA"
   }
