@@ -7,7 +7,7 @@
     "genre": ["Action", "Sci-Fi"],
     "type": "movie",
     "link": "https://www.themoviedb.org/movie/693134",
-    "poster": "https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH9Ai4N0s4p.jpg",
+    "poster": "https://media.themoviedb.org/t/p/w220_and_h330_face/uOYAbN3F5n3ne8TzWjzVEvQ7XGX.jpg",
     "trailer": "https://www.youtube.com/embed/Way9Dexny3w"
   },
   {
@@ -75,7 +75,7 @@
     "genre": ["Sci-Fi", "Drama"],
     "type": "movie",
     "link": "https://www.themoviedb.org/movie/157336",
-    "poster": "https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqoNMq5k8g4q1Q.jpg",
+    "poster": "https://media.themoviedb.org/t/p/w188_and_h282_face/mS4EvhsrT0SQZOlWrQEzWI5KiUa.jpg",
     "trailer": "https://www.youtube.com/embed/zSWdZVtXT7E"
   },
 
@@ -171,7 +171,7 @@
     "genre": ["Crime", "Drama"],
     "type": "series",
     "link": "https://www.themoviedb.org/tv/71446",
-    "poster": "https://image.tmdb.org/t/p/w500/reemIdmO4kfEFJ4f4hW3O7t8b5b.jpg",
+    "poster": "https://media.themoviedb.org/t/p/w188_and_h282_face/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
     "trailer": "https://www.youtube.com/embed/_InqQJRqGW4"
   },
 
